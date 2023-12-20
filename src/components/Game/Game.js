@@ -13,8 +13,7 @@ function Game() {
   const [list, setList] = React.useState([]);
 
   function handleSubmit(newGuess) {
-    const newList = [...list];
-    newList.push(newGuess);
+    const newList = [...list, newGuess];
     setList(newList);
   }
   return (
