@@ -1,9 +1,8 @@
 import React from 'react';
 
-function GuessInput({handleSubmit, wlist}) {
+function GuessInput({handleSubmit, disabled}) {
   
   const [guess, setGuess] = React.useState('');
-  
   function handleForm(e) {
     e.preventDefault();
     if (guess.length != 5) {
@@ -17,7 +16,7 @@ function GuessInput({handleSubmit, wlist}) {
   return (
     <form className="guess-input-wrapper" onSubmit={handleForm}>
       <label htmlFor="guess-input">Enter guess:</label>
-      <input id="guess-input" type="text" value={guess} onChange={(e) => setGuess(e.target.value.toUpperCase())}/>
+      <input id="guess-input" type="text" value={guess} disabled={disabled} onChange={(e) => setGuess(e.target.value.toUpperCase())}/>
     </form>
 
   );
