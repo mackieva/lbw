@@ -1,7 +1,6 @@
 import React from 'react';
 
-function GuessInput({handleSubmit, disabled}) {
-  
+function GuessInput({handleSubmit, disable}) {
   const [guess, setGuess] = React.useState('');
   function handleForm(e) {
     e.preventDefault();
@@ -16,7 +15,7 @@ function GuessInput({handleSubmit, disabled}) {
   return (
     <form className="guess-input-wrapper" onSubmit={handleForm}>
       <label htmlFor="guess-input">Enter guess:</label>
-      <input id="guess-input" type="text" value={guess} disabled={disabled} onChange={(e) => setGuess(e.target.value.toUpperCase())}/>
+      <input id="guess-input" type="text" value={guess} disabled={disable} onChange={(e) => setGuess(e.target.value.toUpperCase())}/>
     </form>
 
   );

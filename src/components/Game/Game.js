@@ -19,10 +19,10 @@ function Game() {
   function handleSubmit(newGuess) {
     const liveCount = guessCount + 1
     
-    if (newGuess === answer) {
+    if (newGuess == answer) {
       setResult(true);
     }
-    if (liveCount === 6) {
+    if (liveCount == 6) {
       setResult(false);
     }
     setGuessCount(liveCount);
